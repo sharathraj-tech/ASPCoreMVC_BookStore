@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudhostica.BookStore", "Cloudhostica.BookStore\Cloudhostica.BookStore.csproj", "{4950E1D2-CD75-43BF-8B0D-5A16086D04FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4950E1D2-CD75-43BF-8B0D-5A16086D04FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4950E1D2-CD75-43BF-8B0D-5A16086D04FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4950E1D2-CD75-43BF-8B0D-5A16086D04FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4950E1D2-CD75-43BF-8B0D-5A16086D04FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54F8CC28-57BA-4002-B432-02430819C347}
+	EndGlobalSection
+EndGlobal
