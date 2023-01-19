@@ -1,4 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 //app.Use(async (context, next) => {
@@ -10,6 +11,8 @@ var app = builder.Build();
 //    await context.Response.WriteAsync("Hi Hello Second");
 //    await next(context);
 //});
+
+
 app.UseRouting();
 
 app.UseEndpoints(endpoints =>
@@ -20,7 +23,12 @@ app.UseEndpoints(endpoints =>
     });
 });
 
-app.MapGet("/", () => "Hello World!");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapDefaultControllerRoute();
+});
+
+//app.MapGet("/", () => "Hello World!");
 
 
 app.Run();
