@@ -1,22 +1,31 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cloudhostica.BookStore.Models;
+using Cloudhostica.BookStore.Repository;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Cloudhostica.BookStore.Controllers
 {
     public class BookController : Controller
     {
-        public string GetAllBooks()
+        private readonly BookRepository _bookRepository = null;
+
+        public BookController()
         {
-            return "All Books";
+            _bookRepository = new BookRepository();
+        }
+        public ViewResult GetAllBooks()
+        {
+            var data = _bookRepository.GetAllBooks();
+            return View();
         }
 
-        public string GetBook(int Id)
+        public BookModel GetBook(int Id)
         {
-            return $"Book with Id= {Id}";
+            return _bookRepository.GetBookById(Id);
         }
 
-        public string SearchBookByName(string bookName,string authorName)
+        public List<BookModel> SearchBookByName(string bookName, string authorName)
         {
-            return $"{bookName} was written by {authorName}";
+            return _bookRepository.SearchBook(bookName, authorName);
         }
     }
 }
