@@ -1,3 +1,5 @@
+using Microsoft.Extensions.FileProviders;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
@@ -11,6 +13,13 @@ var app = builder.Build();
 //    await context.Response.WriteAsync("Hi Hello Second");
 //    await next(context);
 //});
+
+app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions()
+{
+    FileProvider=new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),"MyStaticFiles")),
+    RequestPath="/MyStaticFiles"
+});
 
 
 app.UseRouting();
