@@ -22,12 +22,16 @@ namespace Cloudhostica.BookStore.Repository
         {
             return new List<BookModel>()
             {
-                new BookModel(){Id=1,Title="MVC",Author="Nithish"},
-                new BookModel(){Id=2,Title="MVC",Author="Sharath"},
-                new BookModel(){Id=3,Title=".NET",Author="Jijo"},
-                new BookModel(){Id=4,Title="C#",Author="Vikas"},
-                new BookModel(){Id=5,Title=".NET MVC Architecture",Author="Prathap"},
-                new BookModel(){Id=6,Title="MVC",Author="Bai"}
+                new BookModel(){Id=1,Title="MVC",Author="Nithish",Description="This is the description of MVC"},
+                new BookModel(){Id=2,Title="MVC",Author="Sharath",Description="This is the description of MVC"},
+                new BookModel(){Id=3,Title=".NET",Author="Jijo",Description="This is the description of .NET"},
+                new BookModel(){Id=4,Title="C#",Author="Vikas",Description="This is the description of C#"},
+                new BookModel(){Id=5,Title=".NET MVC Architecture",Author="Prathap",Description="This is the description of .NET MVC Architecture"},
+                new BookModel(){Id=6,Title="MVC",Author="Bai", Description = "This is the description of MVC"},
+                new BookModel(){Id=7,Title="Azure",Author="Bai", Description = "This is the description of MVC"},
+                new BookModel(){Id=8,Title="Azure Devops",Author="aaa", Description = "This is the description of MVC"},
+                new BookModel(){Id=9,Title="C++",Author="aaa", Description = "This is the description of MVC"},
+                new BookModel(){Id=10,Title="Java",Author="Baaai", Description = "This is the description of MVC"}
             };
         }
     }
