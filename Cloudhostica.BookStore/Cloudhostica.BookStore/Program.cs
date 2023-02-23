@@ -2,6 +2,10 @@ using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+#if DEBUG
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+#endif
+
 var app = builder.Build();
 
 //app.Use(async (context, next) => {
@@ -15,11 +19,11 @@ var app = builder.Build();
 //});
 
 app.UseStaticFiles();
-app.UseStaticFiles(new StaticFileOptions()
-{
-    FileProvider=new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),"MyStaticFiles")),
-    RequestPath="/MyStaticFiles"
-});
+//app.UseStaticFiles(new StaticFileOptions()
+//{
+//    FileProvider=new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),"MyStaticFiles")),
+//    RequestPath="/MyStaticFiles"
+//});
 
 
 app.UseRouting();
