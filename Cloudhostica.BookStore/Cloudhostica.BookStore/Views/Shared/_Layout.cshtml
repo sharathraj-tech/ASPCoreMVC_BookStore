@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+
         <nav class="navbar navbar-expand-lg bg-light" role="navigation">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">BookStore</a>
@@ -51,6 +52,8 @@
             </div>
         </nav>
     </header>
+    @RenderSection("BreadCrumb",false);
+    
     <main role="main">
         @RenderBody()
     </main>
@@ -61,6 +64,6 @@
     </footer>
     <script src="~/lib/jquery/jquery.min.js"></script>
     <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.js"></script>
-    @RenderSection("Scripts");
+    @RenderSection("Scripts",false);
 </body>
 </html>

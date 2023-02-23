@@ -63,10 +63,20 @@
         </div>
     </div>
 </div>
-@section Scripts{
+@*@section Scripts{
     <script>
         $(document).ready(function() {
             alert('Document is ready!');
         });
     </script>
+}*@
+
+@section BreadCrumb{
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+            <li class="breadcrumb-item active"><a href="#">Page 2</a></li>
+        </ol>
+    </nav>
 }
