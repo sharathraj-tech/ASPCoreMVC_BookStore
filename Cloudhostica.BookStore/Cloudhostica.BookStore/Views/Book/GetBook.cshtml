@@ -1,5 +1,7 @@
-﻿
-
+﻿@model BookModel
+@{
+    ViewData["Title"] = Model.Title;
+}
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -11,13 +13,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://api.cloudhostica.com/dummyImage/500x200/png/121aaa/000000/Book%20List%201" class="d-block w-100" alt="...">
+                        <img src="https://api.cloudhostica.com/dummyImage/500x300/png/121aaa/000000/Book%20List%201" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://api.cloudhostica.com/dummyImage/500x200/png/ffffff/000000/Book%20List%202" class="d-block w-100" alt="...">
+                        <img src="https://api.cloudhostica.com/dummyImage/500x300/png/ffffff/000000/Book%20List%202" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://api.cloudhostica.com/dummyImage/500x200/png/abb145/000000/Book%20List%203" class="d-block w-100" alt="...">
+                        <img src="https://api.cloudhostica.com/dummyImage/500x300/png/abb145/000000/Book%20List%203" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -33,20 +35,20 @@
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
-                    <h1></h1>
+                    <h1>@Model.Title</h1>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12 text-primary">
                     <span class="label label-primary">By: </span>
-                    <span class="font-monospace">AuthName </span>
+                    <span class="font-monospace">@Model.Author </span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <p class="description">
-                        This book will cover all details about ASP.NET Core
+                        @Model.Description
                     </p>
                 </div>
             </div>
