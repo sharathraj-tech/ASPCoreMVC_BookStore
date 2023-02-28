@@ -20,7 +20,8 @@ namespace Cloudhostica.BookStore.Controllers
 
         public ViewResult GetBook(int? Id)
         {
-            var data = _bookRepository.GetBookById(Id); ;
+            var data = _bookRepository.GetBookById(Id);
+            ViewBag.Title = "Book Store - Book Details - "+data.Title;
             return View(data);
         }
 

@@ -1,11 +1,17 @@
-﻿
+﻿@{
+    dynamic data1 = ViewBag.Data;
+    ViewData["Title"] = "Home";
+}
 
 
 <section class="">
     <div class="p-5 mb-4 bg-light rounded-3 ">
       <div class="container-fluid py-5">
-        <h1 class=" text-center display-5 fw-bold">Welcome to Book Store</h1>
-        <p class="text-center fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+        <h1 class=" text-center display-5 fw-bold">Welcome to Book Store @ViewData["property1"]</h1>
+        <p class="text-center fs-4">@data1.Name <br />
+            Id=@ViewBag.Type.Id<br />
+            Name = @ViewBag.Type.Author
+            Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
         <p class="text-center">
         <button class="btn btn-primary btn-lg text-center" type="button">Search Books</button>
         </p>
